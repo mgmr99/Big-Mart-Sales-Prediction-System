@@ -1,0 +1,71 @@
+{% include 'components/header.html' %}
+<body>
+  <!-- header -->
+  <div class="agileits_header">
+    <div class="container">
+      <div class="w3l_offers">
+        <p>
+          SALE UP TO 70% OFF. USE CODE "SALE70%" .
+          <a href="/products">SHOP NOW</a>
+        </p>
+      </div>
+      <div class="agile-login">
+        <ul>
+          <li><a href="/profile"> My Profile </a></li>
+          <li><a href="/logout">Log Out</a></li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  {% include 'components/middle-header.html' %} {% include
+  'components/navbar.html' %}
+
+  <div class="login">
+    <div class="container">
+      <h2>Sales Prediction</h2>
+
+      <div class="login-form-grids animated wow slideInUp" data-wow-delay=".5s">
+        <form method="post" action="/predict">
+          <input
+            type="text"
+            name="weight"
+            placeholder="Item Weight"
+            required=" "
+          />
+          <input
+            type="text"
+            name="visibility"
+            placeholder="Item Visibility"
+            required=" "
+          />
+          <input
+            type="text"
+            name="Item Type"
+            placeholder="Item Type"
+            required=" "
+          />
+          <input type="text" name="mrp" placeholder="Item MRP" required=" " />
+          <input
+            type="text"
+            name="estb_year"
+            placeholder="Established Year"
+            required=" "
+          />
+          <input type="text" name="type" placeholder="Hight" required=" " />
+          <input type="text" name="tier" placeholder="Tier 1" required=" " />
+          <input
+            type="text"
+            name="type"
+            placeholder="Supermarket Type"
+            required=" "
+          />
+
+          <input type="submit" value="Predict" />
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+{% include 'components/footer.html' %}
